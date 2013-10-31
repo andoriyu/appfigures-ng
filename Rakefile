@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "appfigures-ng"
   gem.homepage = "http://github.com/andoriyu/appfigures-ng"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Ruby client library for AppFigure APIv2}
+  gem.description = %Q{Ruby client library for AppFigures APIv2}
   gem.email = "with.out@me.com"
   gem.authors = ["Andrey Cherkashin"]
   # dependencies defined in Gemfile
