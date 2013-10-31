@@ -1,6 +1,6 @@
 = appfigures-ng
 
-Description goes here.
+Don't you dare use it in anyway until its ready.
 
 == Contributing to appfigures-ng
  
