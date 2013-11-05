@@ -7,6 +7,7 @@ class Appfigures
     def initialize(options = {})
       super('https://api.appfigures.com/v2/') do |conn|
         conn.request :json
+        conn.request :url_encoded
         conn.response :json, :content_type => /\bjson$/
         conn.response :raise_error
         conn.adapter Faraday.default_adapter
