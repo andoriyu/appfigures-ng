@@ -41,7 +41,7 @@ class Appfigures
       tail.each do |report_date, report|
         reports << Hashie::Mash.new({
           date:             Date.parse(report['date']),
-          product_id:       report['product_id'],
+          product_id:       report['product_id'].to_s,
           downloads:        report['downloads'],
           net_downloads:    report['net_downloads'],
           revenue:          report['revenue'].to_f,
@@ -70,6 +70,7 @@ class Appfigures
       res['data'].select{|e| e['product_id'] == id}.each do |app_report|
         app_report['positions'].each_with_index do |position, index|
           data << Hashie::Mash.new({
+            product_id: id.to_s,
             country: app_report['country'],
             store:  app_report['category']['store'],
             category: app_report['category']['name'],
@@ -82,7 +83,7 @@ class Appfigures
         end
       end
       reports << Hashie::Mash.new({
-        product_id: id,
+        product_id: id.to_s,
         reports: data
       })
     end
