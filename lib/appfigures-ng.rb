@@ -44,6 +44,7 @@ class Appfigures
           product_id:       report['product_id'].to_s,
           downloads:        report['downloads'],
           net_downloads:    report['net_downloads'],
+          updates:          report['updates'],
           revenue:          report['revenue'].to_f,
           gift_redeptions:  report['gift_redeptions'],
           promos:           report['promos']
